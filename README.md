@@ -1,10 +1,10 @@
 # Forker
 
-## A lightweight solution to work with multihreading.
+A lightweight solution to work with multithreading.
 
-## Forker allows synchronizing multiple concurrent and/or serial operations.
+Forker allows synchronizing multiple concurrent and/or serial operations.
 
-### How does it work?
+How does it work?
 ```swift
 // Forker works with OperationQueue, then first of all
 // we need to create an OperationQueue object
@@ -68,11 +68,7 @@ There are only three key functions:
 2. `join` - builds a chain of serial operations, can also synchronize previous operations
 3. `onCompletion` - synchronizes previous operations and completes queue execution
 
-Best practice:
-
-`OrderBuyReceivingDataWorker.swift, CryptoHistoryService.swift`
-
 Constraints:
 
 1. Maximum number of concurrent operations in a row: 5
-2. Maximum number of serial operations in a row: 5
+2. Maximum number of serial operations in a row: no limits
